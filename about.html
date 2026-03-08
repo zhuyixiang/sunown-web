@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - THE SUN OWNER</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            padding: 50px 0 40px;
+            text-align: center;
+            background: #fff;
+        }
+        .about-hero h1 {
+            color: #d4740c;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .about-hero-image {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Quality Section */
+        .quality-section {
+            padding: 60px 0 50px;
+            background: #fff;
+        }
+        .quality-section h2 {
+            color: #d4740c;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        .quality-col p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Sourcing Section */
+        .sourcing-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fffaf5 0%, #fff5eb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .sourcing-section::before {
+            content: '';
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212,116,12,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .sourcing-content {
+            padding-right: 40px;
+        }
+        .sourcing-content h2 {
+            color: #d4740c;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        .sourcing-content p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+        .sourcing-stats {
+            display: flex;
+            gap: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+        }
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .stat-icon {
+            width: 45px;
+            height: 45px;
+            background: #d4740c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d4740c;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 8px;
+            height: 350px;
+        }
+        .image-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .image-grid .img-1 { grid-column: 1; grid-row: 1 / 3; }
+        .image-grid .img-2 { grid-column: 2; grid-row: 1; }
+        .image-grid .img-3 { grid-column: 3; grid-row: 1; }
+        .image-grid .img-4 { grid-column: 2; grid-row: 2; }
+        .image-grid .img-5 { grid-column: 3; grid-row: 2; }
+        .image-grid .img-6 { grid-column: 1; grid-row: 3; }
+        .image-grid .img-7 { grid-column: 2; grid-row: 3; }
+        .image-grid .img-8 { grid-column: 3; grid-row: 3; }
+
+        /* Why Choose Us */
+        .why-choose-section {
+            padding: 70px 0;
+            background: #fff;
+        }
+        .why-choose-section h2 {
+            color: #d4740c;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        .feature-card {
+            text-align: left;
+            padding: 10px;
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #d4740c;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            color: #fff;
+            font-size: 1.3rem;
+        }
+        .feature-card h5 {
+            color: #b8620a;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Partners */
+        .about-partners {
+            padding: 40px 0;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+        .partners-label {
+            color: #666;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            padding-right: 20px;
+        }
+        .partners-line {
+            flex: 0 0 80px;
+            height: 1px;
+            background: #ccc;
+            margin-right: 30px;
+        }
+        .partner-logos {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex: 1;
+            justify-content: flex-start;
+        }
+        .partner-logo img {
+            height: 35px;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .about-hero h1 { font-size: 2.5rem; }
+            .quality-section h2 { font-size: 1.8rem; }
+            .sourcing-section .row { flex-direction: column; }
+            .sourcing-content { padding-right: 0; margin-bottom: 40px; }
+            .image-grid { height: 300px; }
+            .why-choose-section h2 { font-size: 1.8rem; }
+        }
+        @media (max-width: 767px) {
+            .about-hero { padding: 40px 0 30px; }
+            .about-hero h1 { font-size: 2rem; }
+            .quality-section { padding: 40px 0; }
+            .quality-section h2 { font-size: 1.5rem; margin-bottom: 30px; }
+            .sourcing-section { padding: 40px 0; }
+            .sourcing-content h2 { font-size: 1.5rem; }
+            .sourcing-stats { flex-direction: column; gap: 20px; }
+            .image-grid { 
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                height: 400px;
+            }
+            .image-grid .img-1 { grid-column: 1; grid-row: 1 / 2; }
+            .image-grid .img-2 { grid-column: 2; grid-row: 1; }
+            .image-grid .img-3 { grid-column: 1; grid-row: 2; }
+            .image-grid .img-4 { grid-column: 2; grid-row: 2; }
+            .image-grid .img-5 { grid-column: 1; grid-row: 3; }
+            .image-grid .img-6 { grid-column: 2; grid-row: 3; }
+            .image-grid .img-7 { grid-column: 1; grid-row: 4; }
+            .image-grid .img-8 { grid-column: 2; grid-row: 4; }
+            .why-choose-section { padding: 50px 0; }
+            .why-choose-section h2 { font-size: 1.5rem; margin-bottom: 30px; }
+            .feature-card { margin-bottom: 25px; }
+            .about-partners { padding: 30px 0; }
+            .about-partners .d-flex { flex-direction: column; align-items: flex-start !important; gap: 15px; }
+            .partners-line { display: none; }
+            .partner-logos { flex-wrap: wrap; gap: 20px; justify-content: center !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏占位符 -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Us</h1>
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="Office Building" class="about-hero-image">
+        </div>
+    </section>
+
+    <!-- Providing Quality Section -->
+    <section class="quality-section">
+        <div class="container">
+            <h2>Providing The Highest Quality<br>Products and Services</h2>
+            <div class="row">
+                <div class="col-lg-4 quality-col">
+                    <p>THE SUN OWNER operates as a specialty ingredients distributor, catering to the food, beverage, nutraceutical, pharmaceutical, and cosmeceutical industries with top-notch ingredients. Our rigorous vendor qualification process ensures that all manufacturers are GMP-certified.</p>
+                    <p>Our extensive experience and accomplishments have established us as the go-to solution for industry manufacturers.</p>
+                </div>
+                <div class="col-lg-4 quality-col">
+                    <p>Our commitment to quality is reflected in sourcing ingredients solely from audited and inspected producers worldwide. With a dedicated focus on quality control and documentation, THE SUN OWNER continually seeks out and procures new and innovative ingredients for the US marketplace.</p>
+                    <p>We have assisted suppliers worldwide in implementing the necessary processes and procedures required by auditing agencies to successfully supply materials to consumers.</p>
+                </div>
+                <div class="col-lg-4 quality-col">
+                    <p>We firmly believe that superior customer relationships and quality products are essential for a thriving business. Upholding these principles, we continue to expand and serve our customers diligently.</p>
+                    <p>Customer service remains our top priority, and we consistently deliver excellent service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sourcing Section -->
+    <section class="sourcing-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="sourcing-content">
+                        <h2>Sourcing the Highest<br>Quality Ingredients</h2>
+                        <p>At THE SUN OWNER, sourcing top-quality ingredients is not just a priority, it's a commitment we take seriously. We understand that the success of our clients depends on the excellence of the ingredients they use, so we leave no stone unturned in our search for the finest products. Our rigorous sourcing process involves building strong relationships with trusted suppliers worldwide, meticulously vetting each ingredient for quality, sustainability, and ethical production practices. We prioritize transparency, ensuring that our clients know exactly where their ingredients come from and how they are sourced. By staying informed about the latest industry trends and innovations, we ensure that we always offer a diverse selection of premium ingredients to meet the evolving needs of our clients.</p>
+                        <div class="sourcing-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="bi bi-emoji-smile"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-number">400+</div>
+                                    <div class="stat-label">Happy Customers</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <div>
+                                    <div class="stat-number">20</div>
+                                    <div class="stat-label">Expert Staff</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="image-grid">
+                        <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?w=400&q=80" alt="Blueberries" class="img-1">
+                        <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300&q=80" alt="Tomatoes" class="img-2">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&q=80" alt="Greens" class="img-3">
+                        <img src="https://images.unsplash.com/photo-1425543103986-22abb7d7e8d2?w=300&q=80" alt="Blueberries close" class="img-4">
+                        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=300&q=80" alt="Tomatoes vine" class="img-5">
+                        <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=300&q=80" alt="Vegetables" class="img-6">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&q=80" alt="Salad" class="img-7">
+                        <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=300&q=80" alt="Tomatoes fresh" class="img-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </div>
+                        <h5>High Quality<br>Ingredients</h5>
+                        <p>We ensure the quality of our products through our standards and practices for product purchasing, testing, and safety.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                        <h5>Prompt &<br>Timely Service</h5>
+                        <p>We strive to provide exceptional service for our customers.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-chat-square-dots-fill"></i>
+                        </div>
+                        <h5>Clear<br>Communication</h5>
+                        <p>We provide open and clear communication when talking to our customers so that our customers can feel completely at ease.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-pencil-fill"></i>
+                        </div>
+                        <h5>Careful<br>Packaging</h5>
+                        <p>We handle, and pack all orders with care to ensure their safe arrival.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="about-partners">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <span class="partners-label">Our Partners</span>
+                <div class="partners-line"></div>
+                <div class="partner-logos">
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/120x40/f5f5f5/666?text=东北制药" alt="Partner 1">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x40/f5f5f5/666?text=SHANDONG" alt="Partner 2">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/120x40/f5f5f5/666?text=华北制药" alt="Partner 3">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/120x40/f5f5f5/666?text=梅花集团" alt="Partner 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer占位符 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/components.js"></script>
+</body>
+</html>

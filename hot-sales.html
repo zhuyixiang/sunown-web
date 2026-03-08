@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Sales - THE SUN OWNER</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .hot-sales-banner {
+            padding: 40px 20px;
+            background: #fff;
+        }
+        .banner-box {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 3px dashed #4a90d9;
+            border-radius: 15px;
+            padding: 30px 40px 25px;
+            text-align: center;
+        }
+        .banner-box h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #d4740c;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+        .banner-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .banner-box p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hot-products-section {
+            padding: 50px 0 80px;
+            background: #fff;
+        }
+        .hot-products-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        .hot-product-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .hot-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .hot-product-img {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+        .hot-product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hot-product-name {
+            padding: 12px 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #333;
+            background: #fff;
+            line-height: 1.3;
+        }
+        @media (max-width: 1200px) {
+            .hot-products-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        @media (max-width: 992px) {
+            .hot-products-grid { grid-template-columns: repeat(3, 1fr); }
+            .banner-box h1 { font-size: 2.2rem; }
+        }
+        @media (max-width: 768px) {
+            .hot-products-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .banner-box { padding: 20px 15px; }
+            .banner-box h1 { font-size: 1.8rem; }
+            .banner-box p { font-size: 0.85rem; }
+            .hot-product-name { font-size: 0.8rem; padding: 10px 8px; }
+        }
+        @media (max-width: 480px) {
+            .hot-products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .hot-product-name { font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="hot-sales-banner">
+        <div class="banner-box">
+            <h1>Hot Sales</h1>
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80" alt="Hot Sales" class="banner-img">
+            <p>We are an enthusiastic importer of softgel ingredients from all over the world, including Asia, India, Europe and South America. We make sure to choose the highest quality softgel products from the best regions, so the ingredients will be the most effective for human use. By partnering with us, you can trust that your products will be enriched with meticulously chosen ingredients from the best regions worldwide, guaranteeing superior results and customer satisfaction.</p>
+        </div>
+    </section>
+
+    <section class="hot-products-section">
+        <div class="container">
+            <div class="hot-products-grid">
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/1.png" alt="GABA"></div>
+                    <div class="hot-product-name">GABA</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/2.png" alt="Dimethyl Sulfone"></div>
+                    <div class="hot-product-name">Dimethyl Sulfone</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/3.png" alt="L-Theanine"></div>
+                    <div class="hot-product-name">L-Theanine</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/4.png" alt="Aspartic Acid Series"></div>
+                    <div class="hot-product-name">Aspartic Acid Series</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/5.png" alt="L-Tryptophan"></div>
+                    <div class="hot-product-name">L-Tryptophan</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/6.png" alt="L-Lysine HCl"></div>
+                    <div class="hot-product-name">L-Lysine HCl</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/7.png" alt="Glucosamine Series"></div>
+                    <div class="hot-product-name">Glucosamine Series</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/8.png" alt="HMB-Ca"></div>
+                    <div class="hot-product-name">HMB-Ca</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/9.png" alt="Creatine Monohydrate"></div>
+                    <div class="hot-product-name">Creatine Monohydrate</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/10.png" alt="L-Carnitine Series"></div>
+                    <div class="hot-product-name">L-Carnitine Series</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/11.png" alt="Beta-Alanine"></div>
+                    <div class="hot-product-name">Beta-Alanine</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/12.png" alt="L-Citrulline"></div>
+                    <div class="hot-product-name">L-Citrulline</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/13.png" alt="BCAA"></div>
+                    <div class="hot-product-name">BCAA</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/14.png" alt="L-Glutamine"></div>
+                    <div class="hot-product-name">L-Glutamine</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/15.png" alt="Taurine"></div>
+                    <div class="hot-product-name">Taurine</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/16.png" alt="L-Arginine"></div>
+                    <div class="hot-product-name">L-Arginine</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/17.png" alt="Coenzyme Q10"></div>
+                    <div class="hot-product-name">Coenzyme Q10</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/18.png" alt="Alpha Lipoic Acid"></div>
+                    <div class="hot-product-name">Alpha Lipoic Acid</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/19.png" alt="Resveratrol"></div>
+                    <div class="hot-product-name">Resveratrol</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/20.png" alt="Curcumin"></div>
+                    <div class="hot-product-name">Curcumin</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/21.png" alt="Quercetin"></div>
+                    <div class="hot-product-name">Quercetin</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/22.png" alt="Lutein"></div>
+                    <div class="hot-product-name">Lutein</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/23.png" alt="Astaxanthin"></div>
+                    <div class="hot-product-name">Astaxanthin</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/24.png" alt="Collagen Peptide"></div>
+                    <div class="hot-product-name">Collagen Peptide</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/25.png" alt="Hyaluronic Acid"></div>
+                    <div class="hot-product-name">Hyaluronic Acid</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/26.png" alt="Vitamin C"></div>
+                    <div class="hot-product-name">Vitamin C</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/27.png" alt="Vitamin D3"></div>
+                    <div class="hot-product-name">Vitamin D3</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/28.png" alt="Vitamin E"></div>
+                    <div class="hot-product-name">Vitamin E</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/29.png" alt="Stevia Extract"></div>
+                    <div class="hot-product-name">Stevia Extract</div>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-product-img"><img src="images/hot/30.png" alt="Monk Fruit Extract"></div>
+                    <div class="hot-product-name">Monk Fruit Extract</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+</body>
+</html>

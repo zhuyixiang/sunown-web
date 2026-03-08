@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Blending Icon - V-shape mixer -->
+  <!-- Left arm of V -->
+  <polygon points="30,40 70,40 100,140 80,140" fill="#d4740c" stroke="#d4740c" stroke-width="4"/>
+  <!-- Right arm of V -->
+  <polygon points="130,40 170,40 120,140 100,140" fill="#d4740c" stroke="#d4740c" stroke-width="4"/>
+  <!-- Bottom point -->
+  <polygon points="80,140 120,140 100,180" fill="#d4740c" stroke="#d4740c" stroke-width="4"/>
+  <!-- Mixing arrows/lines inside -->
+  <path d="M60 70 Q100 100 140 70" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M70 95 Q100 120 130 95" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

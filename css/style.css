@@ -1,0 +1,1309 @@
+/* ============================================
+   THE SUN OWNER 网站主样式文件
+   Perfect Health - 精确复刻
+   
+   【文件说明】
+   此文件包含网站的所有主要样式，包括：
+   - 全局变量（颜色、字体等）
+   - 导航栏样式
+   - 首页各区块样式
+   - 页脚样式
+   - 响应式布局
+   
+   【修改指南】
+   - 修改颜色：更改下方 :root 中的颜色变量
+   - 修改字体大小：搜索 font-size 进行调整
+   - 修改间距：搜索 padding 或 margin 进行调整
+   ============================================ */
+
+/* ============================================
+   全局颜色变量
+   【修改说明】修改这里可以改变整个网站的配色方案
+   ============================================ */
+:root {
+    --primary-color: #d4740c;      /* 主色调 - 橙色，用于标题、按钮等 */
+    --primary-dark: #b8620a;       /* 主色调深色版 - 用于悬停效果 */
+    --secondary-color: #e8923a;    /* 次要色调 - 浅橙色 */
+    --accent-color: #c45c10;       /* 强调色 */
+    --warm-brown: #8b5a2b;         /* 暖棕色 - 用于部分按钮和卡片 */
+    --dark-color: #333;            /* 深色 - 用于正文文字 */
+    --gray-color: #555;            /* 灰色 - 用于次要文字 */
+    --white: #fff;                 /* 白色 */
+    --bg-warm: #fff8f2;            /* 暖色背景 */
+}
+
+/* 全局重置样式 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* 
+   【body 基础样式】
+   - font-family: 网站字体，可根据需要更换
+   - font-size: 基础字体大小（18px）
+   - line-height: 行高（1.6倍）
+*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* 
+   【容器样式】
+   - max-width: 内容最大宽度（1200px）
+   - 修改此值可调整页面内容区域宽度
+*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   导航栏样式 (NAVIGATION)
+   【修改说明】
+   - 修改导航栏高度：调整 padding 值
+   - 修改背景色：调整 background 值
+   - 修改 Logo 大小：调整 .logo-img 的 height 值
+   ============================================ */
+.navbar {
+    padding: 15px 0;
+    background: var(--white) !important;
+}
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-brand {
+    text-decoration: none;
+}
+.navbar-brand .logo-img {
+    height: 60px;
+}
+.footer-logo .logo-img-small {
+    height: 45px;
+    margin-bottom: 15px;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+.nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--dark-color);
+    padding: 10px 18px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-link:hover, .nav-link.active { 
+    color: var(--primary-color); 
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    min-width: 200px;
+    padding: 10px 0;
+    z-index: 100;
+    list-style: none;
+    margin: 0;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 15px;
+}
+.dropdown-item:hover {
+    background: #fff5eb;
+    color: var(--primary-color);
+}
+
+/* ============================================
+   1. 首页横幅区域 (HERO)
+   【修改说明】
+   - 修改背景图片：更换 background 中的 url 地址
+   - 修改高度：调整 min-height 值
+   - 修改标题文字：在 index.html 中修改
+   ============================================ */
+.hero {
+    min-height: 650px;
+    /* 【背景图片】更换此URL可更改首页横幅背景 */
+    background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80') center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, 
+        rgba(255,248,242,0.92) 0%, 
+        rgba(255,245,235,0.85) 30%, 
+        rgba(255,240,225,0.6) 50%,
+        rgba(255,235,215,0.2) 70%,
+        transparent 100%);
+}
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+.hero-row {
+    display: flex;
+    align-items: center;
+}
+.hero-left {
+    width: 40%;
+    padding-right: 40px;
+}
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.hero-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-color);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+.hero-text {
+    font-size: 14px;
+    color: var(--gray-color);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+.hero-btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.hero-btn:hover {
+    background: var(--primary-dark);
+    color: white;
+}
+.hero-right {
+    width: 60%;
+}
+.hero-img {
+    width: 100%;
+    max-width: 580px;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+/* ============================================
+   2. PRODUCTS
+   ============================================ */
+.products {
+    padding: 80px 0 90px;
+    background: linear-gradient(180deg, #fff8f2 0%, #fff0e6 100%);
+    position: relative;
+    overflow: hidden;
+}
+.products::before {
+    content: '';
+    position: absolute;
+    left: -200px;
+    bottom: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212,116,12,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.products .container {
+    position: relative;
+    z-index: 1;
+}
+.products-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 55px;
+    font-style: italic;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+.product-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.product-card-img-wrap {
+    position: relative;
+}
+.product-card-img-wrap .product-card-img {
+    height: 200px;
+}
+.product-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.65);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.product-badge small {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+.product-card-body {
+    padding: 25px 28px 30px;
+}
+.product-card h5 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+.product-card p {
+    font-size: 16px;
+    color: var(--gray-color);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    min-height: 78px;
+}
+.btn-learn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--warm-brown);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+.btn-learn:hover {
+    background: #6d4522;
+    color: white;
+}
+
+/* ============================================
+   3. SERVICES - 精确复刻布局
+   ============================================ */
+.services {
+    background: linear-gradient(180deg, #fff8f2 0%, #fff0e6 100%);
+    padding: 60px 0;
+}
+.services .container {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+}
+.services-left {
+    width: 38%;
+    flex-shrink: 0;
+}
+.services-left img {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.services-right {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+}
+.services-top {
+    display: flex;
+    flex: 1;
+}
+/* Our Services - 白色背景 */
+.service-card-white {
+    flex: 1;
+    background: white;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.service-card-white h5 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 18px;
+}
+.service-card-white p {
+    font-size: 16px;
+    color: var(--gray-color);
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex: 1;
+}
+.service-card-white .btn-outline-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid var(--dark-color);
+    color: var(--dark-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+.service-card-white .btn-outline-dark:hover {
+    background: var(--dark-color);
+    color: white;
+}
+/* Our Products - 暖棕色背景 */
+.service-card-warm {
+    flex: 1;
+    background: var(--warm-brown);
+    padding: 35px 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.service-card-warm h5 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.service-card-warm p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex: 1;
+}
+.service-card-warm .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+.service-card-warm .btn-outline-light:hover {
+    background: white;
+    color: var(--warm-brown);
+}
+/* Contact Us - 橙色背景 */
+.contact-card {
+    background: var(--primary-color);
+    padding: 30px;
+    color: white;
+}
+.contact-card h5 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.contact-card p {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+.contact-card .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.contact-card .btn-outline-light:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* ============================================
+   4. 关于我们区域 (ABOUT)
+   【修改说明】
+   - 修改图片：在 index.html 中更换 img src
+   - 修改文字内容：在 index.html 中修改
+   - 修改按钮样式：调整 .btn-warm 或 .btn-green 样式
+   ============================================ */
+.about {
+    padding: 90px 0;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+.about::after {
+    content: '';
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(232,146,58,0.25) 0%, rgba(232,146,58,0.1) 50%, transparent 70%);
+    border-radius: 50%;
+}
+.about .container { 
+    position: relative; 
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+}
+.about-left {
+    width: 40%;
+    padding-right: 60px;
+}
+.about-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.about-right {
+    width: 60%;
+}
+.about-right h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+.about-right p {
+    font-size: 16px;
+    color: var(--gray-color);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+.btn-warm {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    padding: 14px 35px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+}
+.btn-warm:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* ============================================
+   5. 客户评价区域 (TESTIMONIALS)
+   【修改说明】
+   - 修改评价内容：在 index.html 中修改 .testi-card 内的文字
+   - 修改卡片样式：调整 .testi-card 的 border、padding 等
+   - 修改作者名称颜色：调整 .author 的 color 值
+   ============================================ */
+.testimonials {
+    padding: 80px 0;
+    background: white;
+}
+.testimonials .container {
+    display: flex;
+    align-items: flex-start;
+}
+.testi-left {
+    width: 22%;
+    padding-right: 30px;
+    flex-shrink: 0;
+}
+.testi-left h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+.testi-left > p {
+    font-size: 15px;
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+.testi-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 35px;
+}
+.testi-dots span {
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+}
+.testi-dots span:first-child {
+    width: 45px;
+    background: var(--primary-color);
+}
+.testi-dots span:not(:first-child) { width: 25px; }
+.testi-right {
+    width: 78%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.testi-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+.testi-card p {
+    font-size: 14px;
+    color: var(--gray-color);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 20px;
+    flex: 1;
+}
+.testi-card .author {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* ============================================
+   6. 合作伙伴区域 (PARTNERS)
+   【修改说明】
+   - 修改合作伙伴Logo：在 index.html 中更换 img src
+   - 修改Logo大小：调整 .partner-logo img 的 height 值
+   - 修改背景色：调整 background 值
+   ============================================ */
+.partners {
+    padding: 35px 0;
+    background: #f5f5f5;
+}
+.partners h6 {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+.partners-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.partner-logo img {
+    height: 32px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+.partner-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* ============================================
+   7. 行动号召区域 (CTA SECTION)
+   【修改说明】
+   - 此区域显示"Contact Us Now"按钮
+   - 修改背景色：调整 background 值
+   - 修改按钮文字：在 components.js 中修改
+   ============================================ */
+.cta-section {
+    padding: 60px 0;
+    background: var(--primary-color);  /* 使用主色调橙色 */
+    text-align: center;
+}
+.cta-section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: var(--primary-color);
+    padding: 14px 35px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.cta-btn:hover {
+    background: #f5f5f5;
+    color: var(--primary-color);
+}
+
+/* ============================================
+   8. 联系信息栏 (CONTACT BAR)
+   【修改说明】
+   - 显示地址、电话、邮箱信息
+   - 修改联系信息：在 components.js 中修改
+   - 修改图标：更换 .icon 中的 Bootstrap Icons 类名
+   ============================================ */
+.contact-bar {
+    padding: 30px 0;
+    background: var(--primary-color);
+}
+.contact-bar .container {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    color: white;
+}
+.contact-item .icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.contact-item strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.contact-item span,
+.contact-item a {
+    font-size: 15px;
+    color: white;
+    opacity: 0.9;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* ============================================
+   9. 页脚区域 (FOOTER)
+   【修改说明】
+   - 修改页脚内容：在 components.js 中修改
+   - 修改社交媒体链接：在 components.js 中修改 .social-icon 的 href
+   - 修改版权信息：在 components.js 中修改 .copyright 文字
+   ============================================ */
+.footer {
+    padding: 55px 0 25px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col {
+    padding-right: 30px;
+}
+.footer-col:nth-child(1) { width: 28%; }
+.footer-col:nth-child(2) { width: 24%; }
+.footer-col:nth-child(3) { width: 24%; }
+.footer-col:nth-child(4) { width: 24%; }
+.footer-logo img {
+    height: 45px;
+    margin-bottom: 18px;
+}
+.footer-about {
+    font-size: 15px;
+    color: var(--gray-color);
+    line-height: 1.7;
+}
+.footer h6 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer ul li { margin-bottom: 10px; }
+.footer ul a {
+    font-size: 15px;
+    color: var(--gray-color);
+    text-decoration: none;
+}
+.footer ul a:hover { color: var(--primary-color); }
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    text-decoration: none;
+}
+.social-icon:hover {
+    background: var(--primary-dark);
+    color: white;
+}
+.footer hr {
+    margin: 25px 0;
+    border-color: #eee;
+    width: 100%;
+}
+.footer .copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--dark-color);
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 1100px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 991px) {
+    /* Mobile Navigation */
+    .nav-toggle {
+        display: flex;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        gap: 0;
+        overflow-y: auto;
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+    .nav-link {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 16px;
+    }
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding: 0 0 0 20px;
+        display: none;
+        background: #f9f9f9;
+        border-radius: 0;
+    }
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+    .dropdown-item {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+    .mobile-overlay.active {
+        display: block;
+    }
+    
+    /* Hero */
+    .hero { min-height: auto; padding: 50px 0; }
+    .hero .container { flex-wrap: wrap; }
+    .hero-left, .hero-right { width: 100%; }
+    .hero-left { text-align: center; margin-bottom: 30px; padding-right: 0; }
+    .hero-title { font-size: 42px; }
+    .hero-img { margin: 0 auto; max-width: 500px; }
+    
+    /* Services */
+    .services .container { flex-wrap: wrap; }
+    .services-left, .services-right { width: 100%; }
+    .services-left img { min-height: 350px; border-radius: 15px 15px 0 0; }
+    .services-top { flex-direction: column; }
+    
+    /* About */
+    .about .container { flex-wrap: wrap; }
+    .about-left, .about-right { width: 100%; }
+    .about-left { margin-bottom: 30px; padding-right: 0; }
+    
+    /* Testimonials */
+    .testimonials .container { flex-wrap: wrap; }
+    .testi-left, .testi-right { width: 100%; }
+    .testi-left { margin-bottom: 30px; padding-right: 0; }
+    .testi-right { grid-template-columns: repeat(2, 1fr); }
+    
+    /* Footer */
+    .footer-col { width: 50% !important; margin-bottom: 30px; }
+}
+
+@media (max-width: 767px) {
+    .navbar .container {
+        padding: 0 15px;
+    }
+    .navbar-brand .logo-img {
+        height: 45px;
+    }
+    .hero { padding: 40px 0; }
+    .hero-title { font-size: 28px; }
+    .hero-subtitle { font-size: 16px; }
+    .hero-text { font-size: 14px; }
+    .hero-btn { padding: 12px 28px; font-size: 13px; }
+    
+    .products { padding: 50px 0 60px; }
+    .products-title { font-size: 28px; margin-bottom: 35px; }
+    .products-grid { grid-template-columns: 1fr; gap: 25px; }
+    .product-card-body { padding: 20px; }
+    .product-card h5 { font-size: 20px; }
+    .product-card p { font-size: 14px; min-height: auto; }
+    
+    .services { padding: 40px 0; }
+    .services-left img { min-height: 250px; }
+    .service-card-white, .service-card-warm, .contact-card { padding: 25px 20px; }
+    .service-card-white h5, .service-card-warm h5 { font-size: 20px; }
+    
+    .about { padding: 50px 0; }
+    .about-right h2 { font-size: 26px; }
+    .about-img { height: 250px; }
+    
+    .testimonials { padding: 50px 0; }
+    .testi-left h2 { font-size: 26px; }
+    .testi-right { grid-template-columns: 1fr; }
+    .testi-card { padding: 20px; }
+    
+    .contact-bar .container { flex-direction: column; gap: 25px; align-items: center; text-align: center; }
+    .contact-item { flex-direction: column; align-items: center; }
+    .contact-item .icon { margin-right: 0; margin-bottom: 10px; }
+    
+    .partners { padding: 25px 0; }
+    .partners-row { flex-wrap: wrap; gap: 20px; }
+    .partner-logo img { height: 25px; }
+    
+    .cta-section { padding: 40px 0; }
+    .cta-section h2 { font-size: 20px; }
+    
+    .footer { padding: 40px 0 20px; }
+    .footer-col { width: 100% !important; text-align: center; padding-right: 0; }
+    .social-links { justify-content: center; }
+    .footer-logo { display: flex; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 15px; }
+    .hero-title { font-size: 24px; }
+    .hero-row { flex-direction: column; }
+    .products-title { font-size: 24px; }
+    .about-right h2 { font-size: 22px; }
+    .testi-left h2 { font-size: 22px; }
+}
+
+
+/* ============================================
+   HOT SALES CAROUSEL
+   ============================================ */
+.hot-sales {
+    padding: 60px 0;
+    background: #fff;
+}
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-style: italic;
+}
+.hot-sales-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 0 50px;
+}
+.hot-sales-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+.hot-sales-item {
+    flex: 0 0 calc((100% - 80px) / 5);
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.hot-sales-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.hot-sales-img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+.hot-sales-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hot-sales-item h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 10px 8px;
+    line-height: 1.3;
+}
+.hot-sales-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 10px 15px;
+}
+.hot-sales-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 10;
+    transition: background 0.3s;
+}
+.hot-sales-arrow:hover {
+    background: var(--primary-dark);
+}
+.hot-sales-prev { left: 0; }
+.hot-sales-next { right: 0; }
+.hot-sales-more {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* Products Grid 9 columns */
+.products-grid-9 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ============================================
+   HOT SALES PAGE
+   ============================================ */
+.page-hero {
+    padding: 60px 0 40px;
+    background: linear-gradient(180deg, #fff5eb 0%, #fff 100%);
+    text-align: center;
+}
+.page-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+.page-hero p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.hot-sales-page {
+    padding: 50px 0 80px;
+    background: #fff;
+}
+.hot-sales-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+.hot-product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.hot-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.hot-product-img {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+.hot-product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hot-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e74c3c;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.hot-product-info {
+    padding: 18px;
+    text-align: center;
+}
+.hot-product-info h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+.hot-product-desc {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.hot-product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.btn-inquiry {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.btn-inquiry:hover {
+    background: var(--primary-dark);
+    color: #fff;
+}
+
+/* ============================================
+   RESPONSIVE - HOT SALES
+   ============================================ */
+@media (max-width: 1200px) {
+    .hot-sales-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .hot-sales-item {
+        flex: 0 0 calc((100% - 60px) / 4);
+    }
+}
+
+@media (max-width: 992px) {
+    .hot-sales-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hot-sales-item {
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
+    .products-grid-9 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hot-sales-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .hot-sales-item {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+    .hot-sales-wrapper {
+        padding: 0 45px;
+    }
+    .hot-sales-img {
+        height: 120px;
+    }
+    .hot-sales-item h5 {
+        font-size: 0.85rem;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+    .hot-product-img {
+        height: 140px;
+    }
+    .products-grid-9 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .product-card p {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .hot-sales-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .hot-sales-item {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+    .hot-product-img {
+        height: 120px;
+    }
+    .hot-product-info {
+        padding: 12px;
+    }
+    .hot-product-info h5 {
+        font-size: 0.9rem;
+    }
+    .hot-product-desc {
+        font-size: 0.75rem;
+    }
+    .products-grid-9 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .product-card-body {
+        padding: 15px;
+    }
+    .product-card h5 {
+        font-size: 1rem;
+    }
+    .product-card p {
+        font-size: 0.85rem;
+        min-height: auto;
+        margin-bottom: 12px;
+    }
+}

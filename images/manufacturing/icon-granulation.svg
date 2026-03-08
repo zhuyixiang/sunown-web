@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Granulation Icon - Funnel/Hopper shape -->
+  <!-- Main funnel body -->
+  <polygon points="50,50 150,50 120,130 80,130" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="5"/>
+  <!-- Funnel spout -->
+  <rect x="85" y="130" width="30" height="40" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="5"/>
+  <!-- Particles inside funnel -->
+  <circle cx="80" cy="70" r="6" fill="#d4740c"/>
+  <circle cx="100" cy="65" r="7" fill="#d4740c"/>
+  <circle cx="120" cy="72" r="5" fill="#d4740c"/>
+  <circle cx="90" cy="90" r="6" fill="#d4740c"/>
+  <circle cx="110" cy="88" r="5" fill="#d4740c"/>
+  <circle cx="100" cy="105" r="5" fill="#d4740c"/>
+  <!-- Output particles -->
+  <circle cx="100" cy="180" r="4" fill="#d4740c" opacity="0.7"/>
+  <circle cx="92" cy="188" r="3" fill="#d4740c" opacity="0.5"/>
+  <circle cx="108" cy="186" r="3" fill="#d4740c" opacity="0.5"/>
+</svg>

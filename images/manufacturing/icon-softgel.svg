@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Softgel Capsule Icon -->
+  <ellipse cx="100" cy="100" rx="70" ry="45" stroke="#d4740c" stroke-width="6" fill="none"/>
+  <ellipse cx="100" cy="100" rx="70" ry="45" fill="#d4740c" opacity="0.2"/>
+  <!-- Inner dots representing contents -->
+  <circle cx="70" cy="90" r="8" fill="#d4740c" opacity="0.6"/>
+  <circle cx="100" cy="85" r="10" fill="#d4740c" opacity="0.6"/>
+  <circle cx="130" cy="92" r="7" fill="#d4740c" opacity="0.6"/>
+  <circle cx="85" cy="110" r="9" fill="#d4740c" opacity="0.6"/>
+  <circle cx="115" cy="108" r="8" fill="#d4740c" opacity="0.6"/>
+</svg>

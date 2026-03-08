@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Gummy Bear Icon -->
+  <!-- Body -->
+  <ellipse cx="100" cy="120" rx="50" ry="55" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="5"/>
+  <!-- Head -->
+  <circle cx="100" cy="55" r="35" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="5"/>
+  <!-- Ears -->
+  <circle cx="70" cy="30" r="15" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="4"/>
+  <circle cx="130" cy="30" r="15" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="4"/>
+  <!-- Arms -->
+  <ellipse cx="45" cy="110" rx="15" ry="25" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="4"/>
+  <ellipse cx="155" cy="110" rx="15" ry="25" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="4"/>
+  <!-- Legs -->
+  <ellipse cx="75" cy="170" rx="18" ry="20" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="4"/>
+  <ellipse cx="125" cy="170" rx="18" ry="20" fill="#d4740c" opacity="0.3" stroke="#d4740c" stroke-width="4"/>
+  <!-- Eyes -->
+  <circle cx="88" cy="50" r="5" fill="#d4740c"/>
+  <circle cx="112" cy="50" r="5" fill="#d4740c"/>
+  <!-- Nose -->
+  <ellipse cx="100" cy="62" rx="4" ry="3" fill="#d4740c"/>
+</svg>

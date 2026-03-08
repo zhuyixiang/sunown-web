@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Tablet/Pill Icon - Round tablet with score line -->
+  <circle cx="100" cy="100" r="70" fill="#d4740c" opacity="0.2" stroke="#d4740c" stroke-width="5"/>
+  <!-- Score line across tablet -->
+  <line x1="40" y1="100" x2="160" y2="100" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <!-- Highlight/shine effect -->
+  <ellipse cx="75" cy="70" rx="20" ry="10" fill="#fff" opacity="0.3"/>
+</svg>
