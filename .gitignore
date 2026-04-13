@@ -10,3 +10,5 @@
 *.ipr
 
 /.idea/
+/node/package-lock.json
+/node/node_modules/

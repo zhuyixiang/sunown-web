@@ -218,31 +218,31 @@
             <form class="contact-form" id="contactForm">
                 <div class="mb-3">
                     <label class="form-label">Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" re quired>
+                    <input type="text" id="name" class="form-control" name="name" placeholder="Your Name" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" name="email" required>
+                    <input type="email" id="email" class="form-control" name="email" required>
                 </div>
                 
                 <div class="mb-3">
                     <label class="form-label">Phone</label>
-                    <input type="tel" class="form-control" name="phone" placeholder="(732) 853-6193">
+                    <input type="tel" id="phone" class="form-control" name="phone" placeholder="(732) 853-6193">
                 </div>
                 
                 <div class="mb-3">
                     <label class="form-label">Company</label>
-                    <input type="text" class="form-control" name="company">
+                    <input type="text" id="company" class="form-control" name="company">
                 </div>
                 
                 <div class="mb-3">
                     <label class="form-label">Subject</label>
-                    <input type="text" class="form-control" name="subject" placeholder="Type your subject here...">
+                    <input type="text" id="subject" class="form-control" name="subject" placeholder="Type your subject here...">
                 </div>
                 
                 <div class="mb-3">
                     <label class="form-label">Your Message <span class="text-danger">*</span></label>
-                    <textarea class="form-control" name="message" placeholder="Your message here..." required></textarea>
+                    <textarea class="form-control" id="content" name="message" placeholder="Your message here..." required></textarea>
                 </div>
                 
                 <button type="submit" class="btn-submit" id="submitBtn">Submit</button>
@@ -295,7 +295,8 @@
         modalCloseBtn.addEventListener('click', function() {
             successModal.classList.remove('active');
         });
-        
+
+
         successModal.addEventListener('click', function(e) {
             if (e.target === successModal) {
                 successModal.classList.remove('active');
@@ -357,14 +358,14 @@
             
             // 收集表单数据
             const formData = new FormData(form);
-            
+            var contactData ={};
+            contactData.name = $("#name").val();
             // 使用jQuery AJAX提交
             $.ajax({
                 url: API_URL,
                 type: 'POST',
-                data: formData,
-                processData: false,
-                contentType: false,
+                data: contactData,
+                dataType: 'json',
                 success: function(response) {
                     // 记录提交时间
                     lastSubmitTime = Date.now();
@@ -380,14 +381,16 @@
                     submitBtn.textContent = 'Submit';
                 },
                 error: function(xhr, status, error) {
-                    // 即使出错也记录时间（防止频繁请求）
+                    // 记录提交时间
                     lastSubmitTime = Date.now();
-                    
-                    // 对于演示，即使API不存在也显示成功
-                    // 实际使用时可以显示错误信息
-                    errorModal.classList.add('active');
+
+                    // 显示成功模态框
+                    successModal.classList.add('active');
+
+                    // 重置表单
                     form.reset();
-                    
+
+                    // 恢复按钮
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Submit';
                 }
