@@ -15,7 +15,7 @@ app.get('/api/hello', (req, res) => {
 app.post('/api/contact', function (req,res, next){
     console.log(req.body)
     console.log('ok')
-    res.send('ok!')
+    res.send('{}')
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

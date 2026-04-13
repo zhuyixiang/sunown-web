@@ -131,7 +131,7 @@ function loadFooter() {
                 <div class="icon"><i class="bi bi-telephone-fill"></i></div>
                 <div>
                     <strong>Call Us</strong>
-                    <a href="tel:+86 ">+1-732-853-6193</a>
+                    <a href="tel:+86 ">+1-323-487-9145</a>
                 </div>
             </div>
             <div class="contact-item">
@@ -177,8 +177,8 @@ function loadFooter() {
                 <h6>Follow Us On:</h6>
                 <div class="social-links">
                     <a href="https://www.facebook.com/share/1GLK4G8W2o/?mibextid=wwXIfr" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
-                    <a href="https://x.com/kongqianjuehou" target="_blank" class="social-icon"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://www.linkedin.com/company/the-sun-owner-pty-ltd/posts/?feedView=all" class="social-icon"><i class="bi bi-linkedin"></i></a>
+<!--                    <a href="https://x.com/kongqianjuehou" target="_blank" class="social-icon"><i class="bi bi-twitter-x"></i></a>-->
+                    <a href="https://www.linkedin.com/company/the-sun-owner-pty-ltd/posts/?feedView=all" target="_blank"  class="social-icon"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
             
