@@ -21,15 +21,15 @@
    【修改说明】修改这里可以改变整个网站的配色方案
    ============================================ */
 :root {
-    --primary-color: #5b9bd5;      /* 主色�?- 淡蓝色 - 用于标题、按钮等 */
-    --primary-dark: #4a8ac4;       /* 主色调深色版 - 用于悬停效果 */
-    --secondary-color: #7bb5e8;    /* 次要色调 - 浅蓝�?*/
-    --accent-color: #4585c0;       /* 强调�?*/
-    --warm-brown: #5b8db8;         /* 暖棕�?- 用于部分按钮和卡�?*/
+    --primary-color: #2d8a4e;      /* 主色�?- 淡蓝色 - 用于标题、按钮等 */
+    --primary-dark: #22703b;       /* 主色调深色版 - 用于悬停效果 */
+    --secondary-color: #5ca870;    /* 次要色调 - 浅蓝�?*/
+    --accent-color: #2d7d46;       /* 强调�?*/
+    --warm-brown: #3d8c52;         /* 暖棕�?- 用于部分按钮和卡�?*/
     --dark-color: #333;            /* 深色 - 用于正文文字 */
     --gray-color: #555;            /* 灰色 - 用于次要文字 */
     --white: #fff;                 /* 白色 */
-    --bg-warm: #f5f9fd;            /* 暖色背景 */
+    --bg-warm: #f5faf5;            /* 暖色背景 */
 }
 
 /* 全局重置样式 */
@@ -79,7 +79,7 @@ body {
     text-decoration: none;
 }
 .navbar-brand .logo-img {
-    height: 60px;
+    height: 120px;
 }
 .footer-logo .logo-img-small {
     height: 45px;
@@ -131,7 +131,7 @@ body {
     font-size: 15px;
 }
 .dropdown-item:hover {
-    background: #f0f6ff;
+    background: #f0faf2;
     color: var(--primary-color);
 }
 
@@ -230,7 +230,7 @@ body {
    ============================================ */
 .products {
     padding: 80px 0 90px;
-    background: linear-gradient(180deg, #f5f9fd 0%, #eaf3fb 100%);
+    background: linear-gradient(180deg, #f5faf5 0%, #e8f5ea 100%);
     position: relative;
     overflow: hidden;
 }
@@ -332,7 +332,7 @@ body {
     letter-spacing: 0.3px;
 }
 .btn-learn:hover {
-    background: #4a7db0;
+    background: #2e7a3f;
     color: white;
 }
 
@@ -340,7 +340,7 @@ body {
    3. SERVICES - 精确复刻布局
    ============================================ */
 .services {
-    background: linear-gradient(180deg, #f5f9fd 0%, #eaf3fb 100%);
+    background: linear-gradient(180deg, #f5faf5 0%, #e8f5ea 100%);
     padding: 60px 0;
 }
 .services .container {
@@ -958,7 +958,7 @@ body {
         padding: 0 15px;
     }
     .navbar-brand .logo-img {
-        height: 45px;
+        height: 90px;
     }
     .hero { padding: 40px 0; }
     .hero-title { font-size: 28px; }
@@ -1114,7 +1114,7 @@ body {
    ============================================ */
 .page-hero {
     padding: 60px 0 40px;
-    background: linear-gradient(180deg, #f0f6ff 0%, #fff 100%);
+    background: linear-gradient(180deg, #f0faf2 0%, #fff 100%);
     text-align: center;
 }
 .page-hero h1 {

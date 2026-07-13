@@ -253,14 +253,14 @@
 
 /* CTA Section - Warm Color */
 .mfg-cta-section {
-    background: linear-gradient(135deg, #5b9bd5 0%, #7bb5e8 100%);
+    background: linear-gradient(135deg, #2d8a4e 0%, #5ca870 100%);
     padding: 60px 0;
     position: relative;
     overflow: hidden;
 }
 
 .cta-label {
-    color: #e8f0fa;
+    color: #e8f5ea;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -285,7 +285,7 @@
 }
 
 .btn-cta-primary {
-    background-color: #4a8ac4;
+    background-color: #22703b;
     color: #fff;
     padding: 12px 28px;
     border-radius: 25px;
@@ -297,7 +297,7 @@
 }
 
 .btn-cta-primary:hover {
-    background-color: #3a6da8;
+    background-color: #1f5e2e;
     color: #fff;
     transform: translateY(-2px);
 }
