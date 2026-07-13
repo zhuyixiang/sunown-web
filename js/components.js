@@ -178,7 +178,7 @@ function loadFooter() {
                 <div class="social-links">
 <!--                    <a href="https://www.facebook.com/share/1GLK4G8W2o/?mibextid=wwXIfr" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>-->
 <!--                    <a href="https://x.com/kongqianjuehou" target="_blank" class="social-icon"><i class="bi bi-twitter-x"></i></a>-->
-<!--                    <a href="https://www.linkedin.com/company/the-sun-owner-pty-ltd/posts/?feedView=all" target="_blank"  class="social-icon"><i class="bi bi-linkedin"></i></a>-->
+                    <a href="https://www.linkedin.com/company/104148478/posts/?feedView=all" target="_blank"  class="social-icon"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
             
