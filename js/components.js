@@ -30,7 +30,7 @@ function loadNavbar() {
     <nav class="navbar">
         <div class="container">
             <a href="${base}index.html" class="navbar-brand">
-                <img src="${base}images/logo.png" alt="nutra queen inc." class="logo-img">
+                <img src="${base}images/logo.png" alt="nutra queen inc" class="logo-img">
             </a>
             
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -148,9 +148,9 @@ function loadFooter() {
         <div class="container">
             <div class="footer-col">
                 <div class="footer-logo">
-                    <img src="${base}images/logo.png" alt="nutra queen inc." class="logo-img-small">
+                    <img src="${base}images/logo.png" alt="nutra queen inc" class="logo-img-small">
                 </div>
-                <p class="footer-about">nutra queen inc. is a specialty ingredients distributor that supplies high quality ingredients to food, beverage, nutraceutical, pharmaceutical and cosmeceutical industries.</p>
+                <p class="footer-about">nutra queen inc is a specialty ingredients distributor that supplies high quality ingredients to food, beverage, nutraceutical, pharmaceutical and cosmeceutical industries.</p>
             </div>
             
             <div class="footer-col">
@@ -183,7 +183,7 @@ function loadFooter() {
             </div>
             
             <hr>
-            <p class="copyright">Copyright © 2025 nutra queen inc. | All Rights Reserved</p>
+            <p class="copyright">Copyright © 2025 nutra queen inc | All Rights Reserved</p>
         </div>
     </footer>
     `;
