@@ -124,7 +124,7 @@ function loadFooter() {
                 <div class="icon"><i class="bi bi-geo-alt-fill"></i></div>
                 <div>
                     <strong>Address</strong>
-                    <span> <br/></span>
+                    <span>13668 Valley Blvd, Unit D1, City of Industry,<br/> CA, 91746</span>
                 </div>
             </div>
             <div class="contact-item">

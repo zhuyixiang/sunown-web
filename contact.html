@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -279,9 +279,9 @@
     <script src="js/components.js"></script>
     <script>
     (function() {
-        // 提交时间控制 - 至少10秒提交一�?
+        // 提交时间控制 - 至少10秒提交一�?
         let lastSubmitTime = 0;
-        const MIN_SUBMIT_INTERVAL = 10000; // 10�?
+        const MIN_SUBMIT_INTERVAL = 10000; // 10�?
         
         // 后端API地址 - 请替换为实际地址
         const API_URL = '/api/contact';
@@ -357,7 +357,7 @@
                 return;
             }
             
-            // 检查提交间�?
+            // 检查提交间�?
             const now = Date.now();
             if (now - lastSubmitTime < MIN_SUBMIT_INTERVAL) {
                 const remainingTime = Math.ceil((MIN_SUBMIT_INTERVAL - (now - lastSubmitTime)) / 1000);
