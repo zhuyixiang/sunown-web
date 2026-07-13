@@ -44,7 +44,7 @@ app.post('/api/contact', function (req,res, next){
     });
     transporter.sendMail({
         from: 'joshua@nutraqueenbio.com',
-        to: 'joshua@nutraqueenbio.com',
+        to: 'sales@nutraqueenbio.com',
         subject: 'From nutra queen inc Web',
         text: message
     });
