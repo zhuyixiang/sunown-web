@@ -131,7 +131,7 @@ function loadFooter() {
                 <div class="icon"><i class="bi bi-telephone-fill"></i></div>
                 <div>
                     <strong>Call Us</strong>
-                    <a href="tel:+61"></a>
+                    <a href="tel:+1">+1 (901) 295-9792</a>
                 </div>
             </div>
             <div class="contact-item">
