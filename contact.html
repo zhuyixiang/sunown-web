@@ -10,12 +10,12 @@
     <style>
         .contact-hero {
             padding: 60px 0 40px;
-            background: linear-gradient(180deg, #fff5eb 0%, #fff 100%);
+            background: linear-gradient(180deg, #f0f6ff 0%, #fff 100%);
         }
         .contact-hero h1 {
             font-size: 3rem;
             font-weight: 700;
-            color: #d4740c;
+            color: #5b9bd5;
             margin-bottom: 30px;
             font-style: italic;
         }
@@ -29,7 +29,7 @@
             color: #333;
             text-decoration: none;
         }
-        .contact-info-text a:hover { color: #d4740c; }
+        .contact-info-text a:hover { color: #5b9bd5; }
         .contact-image {
             border-radius: 10px;
             width: 100%;
@@ -41,7 +41,7 @@
             background-color: #fff;
         }
         .form-intro {
-            color: #d4740c;
+            color: #5b9bd5;
             font-weight: 600;
             font-size: 1.1rem;
             margin-bottom: 30px;
@@ -61,7 +61,7 @@
             width: 100%;
         }
         .contact-form .form-control:focus {
-            border-color: #d4740c;
+            border-color: #5b9bd5;
             outline: none;
             box-shadow: 0 0 0 3px rgba(212, 116, 12, 0.15);
         }
@@ -70,7 +70,7 @@
             resize: vertical;
         }
         .contact-form .btn-submit {
-            background-color: #d4740c;
+            background-color: #5b9bd5;
             border: none;
             color: #fff;
             padding: 12px 0;
@@ -81,7 +81,7 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-        .contact-form .btn-submit:hover { background-color: #b8630a; }
+        .contact-form .btn-submit:hover { background-color: #4a8ac4; }
         .contact-form .btn-submit:disabled {
             background-color: #ccc;
             cursor: not-allowed;
@@ -127,7 +127,7 @@
         .modal-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #d4740c, #e8923a);
+            background: linear-gradient(135deg, #5b9bd5, #7bb5e8);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -139,7 +139,7 @@
             color: #fff;
         }
         .modal-content h3 {
-            color: #d4740c;
+            color: #5b9bd5;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 15px;
@@ -151,7 +151,7 @@
             margin-bottom: 25px;
         }
         .modal-btn {
-            background: #d4740c;
+            background: #5b9bd5;
             color: #fff;
             border: none;
             padding: 12px 40px;
@@ -161,7 +161,7 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-        .modal-btn:hover { background: #b8630a; }
+        .modal-btn:hover { background: #4a8ac4; }
 
         /* Responsive */
         @media (max-width: 991px) {
@@ -198,9 +198,9 @@
                 <h1>Contact Us</h1>
                 <div class="contact-info-text">
                     <p><strong>nutra queen inc.</strong></p>
-                    <p>UNIT 75/101 BALHAM RD, ARCHERFIELD QLD 4108</p>
-                    <p>Brisbane，Australia</p>
-                    <p style="margin-top:15px;"><strong>Email:</strong> <a href="mailto:sales@thesunowner.com">sales@thesunowner.com</a></p>
+                    <p></p>
+                    <p>USA</p>
+                    <p style="margin-top:15px;"><strong>Email:</strong> <a href="mailto:sales@nutraqueeninc.com">sales@nutraqueeninc.com</a></p>
 <!--                    <p><strong>Phone:</strong> <a href="tel:+17328536193">+1-732-853-6193</a></p>-->
                 </div>
             </div>
@@ -279,9 +279,9 @@
     <script src="js/components.js"></script>
     <script>
     (function() {
-        // 提交时间控制 - 至少10秒提交一�?
+        // 提交时间控制 - 至少10秒提交一�?
         let lastSubmitTime = 0;
-        const MIN_SUBMIT_INTERVAL = 10000; // 10�?
+        const MIN_SUBMIT_INTERVAL = 10000; // 10�?
         
         // 后端API地址 - 请替换为实际地址
         const API_URL = '/api/contact';
@@ -357,7 +357,7 @@
                 return;
             }
             
-            // 检查提交间�?
+            // 检查提交间�?
             const now = Date.now();
             if (now - lastSubmitTime < MIN_SUBMIT_INTERVAL) {
                 const remainingTime = Math.ceil((MIN_SUBMIT_INTERVAL - (now - lastSubmitTime)) / 1000);
