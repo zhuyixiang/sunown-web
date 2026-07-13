@@ -38,13 +38,13 @@ app.post('/api/contact', function (req,res, next){
         port: 465,
         secure: true, // use STARTTLS (upgrade connection to TLS after connecting)
         auth: {
-            user: 'joshua@thesunowner.com',
+            user: 'joshua@nutraqueenbio.com',
             pass: 'Zyx820317',
         },
     });
     transporter.sendMail({
-        from: 'joshua@thesunowner.com',
-        to: 'joshua@thesunowner.com',
+        from: 'joshua@nutraqueenbio.com',
+        to: 'joshua@nutraqueenbio.com',
         subject: 'From nutra queen inc Web',
         text: message
     });
