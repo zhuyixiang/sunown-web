@@ -45,7 +45,7 @@ app.post('/api/contact', function (req,res, next){
     transporter.sendMail({
         from: 'joshua@thesunowner.com',
         to: 'joshua@thesunowner.com',
-        subject: 'From Sun Owner Web',
+        subject: 'From nutra queen inc. Web',
         text: message
     });
     console.log('ok')

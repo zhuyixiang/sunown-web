@@ -1,5 +1,5 @@
 /**
- * THE SUN OWNER - Main JavaScript
+ * nutra queen inc. - Main JavaScript
  */
 
 $(document).ready(function() {

@@ -1,19 +1,19 @@
 /* ============================================
-   THE SUN OWNER 网站主样式文件
+   nutra queen inc. 网站主样式文�?
    Perfect Health - 精确复刻
    
-   【文件说明】
-   此文件包含网站的所有主要样式，包括：
-   - 全局变量（颜色、字体等）
-   - 导航栏样式
-   - 首页各区块样式
+   【文件说明�?
+   此文件包含网站的所有主要样式，包括�?
+   - 全局变量（颜色、字体等�?
+   - 导航栏样�?
+   - 首页各区块样�?
    - 页脚样式
    - 响应式布局
    
-   【修改指南】
-   - 修改颜色：更改下方 :root 中的颜色变量
-   - 修改字体大小：搜索 font-size 进行调整
-   - 修改间距：搜索 padding 或 margin 进行调整
+   【修改指南�?
+   - 修改颜色：更改下�?:root 中的颜色变量
+   - 修改字体大小：搜�?font-size 进行调整
+   - 修改间距：搜�?padding �?margin 进行调整
    ============================================ */
 
 /* ============================================
@@ -21,11 +21,11 @@
    【修改说明】修改这里可以改变整个网站的配色方案
    ============================================ */
 :root {
-    --primary-color: #d4740c;      /* 主色调 - 橙色，用于标题、按钮等 */
+    --primary-color: #d4740c;      /* 主色�?- 橙色，用于标题、按钮等 */
     --primary-dark: #b8620a;       /* 主色调深色版 - 用于悬停效果 */
-    --secondary-color: #e8923a;    /* 次要色调 - 浅橙色 */
-    --accent-color: #c45c10;       /* 强调色 */
-    --warm-brown: #8b5a2b;         /* 暖棕色 - 用于部分按钮和卡片 */
+    --secondary-color: #e8923a;    /* 次要色调 - 浅橙�?*/
+    --accent-color: #c45c10;       /* 强调�?*/
+    --warm-brown: #8b5a2b;         /* 暖棕�?- 用于部分按钮和卡�?*/
     --dark-color: #333;            /* 深色 - 用于正文文字 */
     --gray-color: #555;            /* 灰色 - 用于次要文字 */
     --white: #fff;                 /* 白色 */
@@ -36,10 +36,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* 
-   【body 基础样式】
-   - font-family: 网站字体，可根据需要更换
-   - font-size: 基础字体大小（18px）
-   - line-height: 行高（1.6倍）
+   【body 基础样式�?
+   - font-family: 网站字体，可根据需要更�?
+   - font-size: 基础字体大小�?8px�?
+   - line-height: 行高�?.6倍）
 */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,8 +49,8 @@ body {
 }
 
 /* 
-   【容器样式】
-   - max-width: 内容最大宽度（1200px）
+   【容器样式�?
+   - max-width: 内容最大宽度（1200px�?
    - 修改此值可调整页面内容区域宽度
 */
 .container {
@@ -60,11 +60,11 @@ body {
 }
 
 /* ============================================
-   导航栏样式 (NAVIGATION)
-   【修改说明】
-   - 修改导航栏高度：调整 padding 值
-   - 修改背景色：调整 background 值
-   - 修改 Logo 大小：调整 .logo-img 的 height 值
+   导航栏样�?(NAVIGATION)
+   【修改说明�?
+   - 修改导航栏高度：调整 padding �?
+   - 修改背景色：调整 background �?
+   - 修改 Logo 大小：调�?.logo-img �?height �?
    ============================================ */
 .navbar {
     padding: 15px 0;
@@ -137,14 +137,14 @@ body {
 
 /* ============================================
    1. 首页横幅区域 (HERO)
-   【修改说明】
-   - 修改背景图片：更换 background 中的 url 地址
-   - 修改高度：调整 min-height 值
-   - 修改标题文字：在 index.html 中修改
+   【修改说明�?
+   - 修改背景图片：更�?background 中的 url 地址
+   - 修改高度：调�?min-height �?
+   - 修改标题文字：在 index.html 中修�?
    ============================================ */
 .hero {
     min-height: 650px;
-    /* 【背景图片】更换此URL可更改首页横幅背景 */
+    /* 【背景图片】更换此URL可更改首页横幅背�?*/
     background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80') center center/cover no-repeat;
     position: relative;
     display: flex;
@@ -407,7 +407,7 @@ body {
     background: var(--dark-color);
     color: white;
 }
-/* Our Products - 暖棕色背景 */
+/* Our Products - 暖棕色背�?*/
 .service-card-warm {
     flex: 1;
     background: var(--warm-brown);
@@ -481,10 +481,10 @@ body {
 
 /* ============================================
    4. 关于我们区域 (ABOUT)
-   【修改说明】
-   - 修改图片：在 index.html 中更换 img src
-   - 修改文字内容：在 index.html 中修改
-   - 修改按钮样式：调整 .btn-warm 或 .btn-green 样式
+   【修改说明�?
+   - 修改图片：在 index.html 中更�?img src
+   - 修改文字内容：在 index.html 中修�?
+   - 修改按钮样式：调�?.btn-warm �?.btn-green 样式
    ============================================ */
 .about {
     padding: 90px 0;
@@ -555,10 +555,10 @@ body {
 
 /* ============================================
    5. 客户评价区域 (TESTIMONIALS)
-   【修改说明】
-   - 修改评价内容：在 index.html 中修改 .testi-card 内的文字
-   - 修改卡片样式：调整 .testi-card 的 border、padding 等
-   - 修改作者名称颜色：调整 .author 的 color 值
+   【修改说明�?
+   - 修改评价内容：在 index.html 中修�?.testi-card 内的文字
+   - 修改卡片样式：调�?.testi-card �?border、padding �?
+   - 修改作者名称颜色：调整 .author �?color �?
    ============================================ */
 .testimonials {
     padding: 80px 0;
@@ -630,10 +630,10 @@ body {
 
 /* ============================================
    6. 合作伙伴区域 (PARTNERS)
-   【修改说明】
-   - 修改合作伙伴Logo：在 index.html 中更换 img src
-   - 修改Logo大小：调整 .partner-logo img 的 height 值
-   - 修改背景色：调整 background 值
+   【修改说明�?
+   - 修改合作伙伴Logo：在 index.html 中更�?img src
+   - 修改Logo大小：调�?.partner-logo img �?height �?
+   - 修改背景色：调整 background �?
    ============================================ */
 .partners {
     padding: 35px 0;
@@ -664,14 +664,14 @@ body {
 
 /* ============================================
    7. 行动号召区域 (CTA SECTION)
-   【修改说明】
-   - 此区域显示"Contact Us Now"按钮
-   - 修改背景色：调整 background 值
-   - 修改按钮文字：在 components.js 中修改
+   【修改说明�?
+   - 此区域显�?Contact Us Now"按钮
+   - 修改背景色：调整 background �?
+   - 修改按钮文字：在 components.js 中修�?
    ============================================ */
 .cta-section {
     padding: 60px 0;
-    background: var(--primary-color);  /* 使用主色调橙色 */
+    background: var(--primary-color);  /* 使用主色调橙�?*/
     text-align: center;
 }
 .cta-section h2 {
@@ -699,11 +699,11 @@ body {
 }
 
 /* ============================================
-   8. 联系信息栏 (CONTACT BAR)
-   【修改说明】
-   - 显示地址、电话、邮箱信息
-   - 修改联系信息：在 components.js 中修改
-   - 修改图标：更换 .icon 中的 Bootstrap Icons 类名
+   8. 联系信息�?(CONTACT BAR)
+   【修改说明�?
+   - 显示地址、电话、邮箱信�?
+   - 修改联系信息：在 components.js 中修�?
+   - 修改图标：更�?.icon 中的 Bootstrap Icons 类名
    ============================================ */
 .contact-bar {
     padding: 30px 0;
@@ -746,10 +746,10 @@ body {
 
 /* ============================================
    9. 页脚区域 (FOOTER)
-   【修改说明】
-   - 修改页脚内容：在 components.js 中修改
-   - 修改社交媒体链接：在 components.js 中修改 .social-icon 的 href
-   - 修改版权信息：在 components.js 中修改 .copyright 文字
+   【修改说明�?
+   - 修改页脚内容：在 components.js 中修�?
+   - 修改社交媒体链接：在 components.js 中修�?.social-icon �?href
+   - 修改版权信息：在 components.js 中修�?.copyright 文字
    ============================================ */
 .footer {
     padding: 55px 0 25px;
