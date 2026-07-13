@@ -3,14 +3,14 @@
 /* Hero Section with Banner Image */
 .page-hero {
     padding: 60px 0 40px;
-    background: linear-gradient(180deg, #f0faf2 0%, #fff 100%);
+    background: linear-gradient(180deg, #f2fafa 0%, #fff 100%);
     text-align: center;
 }
 
 .page-hero h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #2d8a4e;
+    color: #2A9395;
     margin-bottom: 25px;
     font-style: italic;
 }
@@ -53,7 +53,7 @@
 .products-section .section-title h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2d8a4e;
+    color: #2A9395;
     font-style: italic;
 }
 
@@ -89,7 +89,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    background: #2d8a4e;
+    background: #2A9395;
     color: #fff;
     padding: 2px 8px;
     font-size: 0.7rem;
@@ -134,7 +134,7 @@
 .products-more .section-title h2 {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #2d8a4e;
+    color: #2A9395;
     font-style: italic;
 }
 
@@ -154,7 +154,7 @@
 }
 
 .products-more-list li:hover {
-    color: #2d8a4e;
+    color: #2A9395;
 }
 
 /* Products Page - Old Style (for backwards compatibility) */
@@ -179,7 +179,7 @@
 }
 
 .products-filter input:focus {
-    border-color: #2d8a4e;
+    border-color: #2A9395;
     box-shadow: 0 0 0 3px rgba(212, 116, 12, 0.15);
 }
 
@@ -242,7 +242,7 @@
 
 .btn-inquiry-sm {
     display: inline-block;
-    background: #2d8a4e;
+    background: #2A9395;
     color: #fff;
     padding: 8px 20px;
     border-radius: 20px;
@@ -254,7 +254,7 @@
 }
 
 .btn-inquiry-sm:hover {
-    background: #22703b;
+    background: #1E6E70;
     color: #fff;
 }
 
