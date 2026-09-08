@@ -1,5 +1,5 @@
 /**
- * nutra queen inc - Main JavaScript
+ * Nutra Queen Inc - Main JavaScript
  */
 
 $(document).ready(function() {
